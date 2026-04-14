@@ -98,4 +98,16 @@ describe("validar senha", () => {
         expect(resultado).toBe(true);
     });
 
+    test('rejeitar senha com espaços em branco', ()=> {
+        const senha = new Senha("Abc defgh1!");
+        const resultado = ServicoSenha.verificarSenha(senha.senha);
+        expect(resultado).toBe(false);
+    });
+
+    test('aceitar senha sem espaços em branco', ()=> {
+        const senha = new Senha("Abcdefgh1!");
+        const resultado = ServicoSenha.verificarSenha(senha.senha);
+        expect(resultado).toBe(true);
+    });
+
 });
