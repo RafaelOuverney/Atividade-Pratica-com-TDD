@@ -25,4 +25,11 @@ describe("validar senha", () => {
         const resultado = ServicoSenha.verificarSenha(senha.senha);
         expect(resultado).toBe(true);
     });
+
+    test('rejeitar sem letra minúscula', ()=> {
+        const senha = new Senha("ABCDEFGH");
+        const resultado = ServicoSenha.verificarSenha(senha.senha);
+        expect(resultado).toBe(false);
+    });
+
 });
