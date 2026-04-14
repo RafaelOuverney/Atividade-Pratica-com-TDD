@@ -74,4 +74,10 @@ describe("validar senha", () => {
         expect(resultado).toBe(false);
     });
 
+    test('rejeitar senha sem ao menos um numero', ()=> {
+        const senha = new Senha("Abcdefgh");
+        const resultado = ServicoSenha.verificarSenha(senha.senha);
+        expect(resultado).toBe(false);
+    });
+
 });
