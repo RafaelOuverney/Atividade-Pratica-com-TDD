@@ -4,7 +4,8 @@ class ServicoSenha {
         return this.temTamanhoMinimo(senha) && 
         this.temPadrao(senha, /[A-Z]/) && 
         this.temPadrao(senha, /[a-z]/) && 
-        this.temPadrao(senha, /[0-9]/);
+        this.temPadrao(senha, /[0-9]/) &&
+        this.temPadrao(senha, /[!@#$%^&*(),.?":{}|<>]/);
     }
 
     static temTamanhoMinimo(senha) {
