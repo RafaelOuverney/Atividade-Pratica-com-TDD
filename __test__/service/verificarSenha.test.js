@@ -3,13 +3,13 @@ const {Senha} = require("../../src/model/senha.js");
 
 describe("validar senha", () => {
     test('rejeitar senha com menos de 8 caracteres', () => {
-        const senha = new Senha("abcde");
+        const senha = new Senha("abcde1");
         const resultado = ServicoSenha.verificarSenha(senha.senha);
         expect(resultado).toBe(false);  
     });
 
     test('aceitar senha com 8 ou mais caracteres', () => {
-        const senha = new Senha("Abcdefgh");
+        const senha = new Senha("Abcdefgh1");
         const resultado = ServicoSenha.verificarSenha(senha.senha);
         expect(resultado).toBe(true);  
     });
@@ -21,7 +21,7 @@ describe("validar senha", () => {
     })
 
     test('aceitar senha com letra Maiúscula', ()=> {
-        const senha = new Senha("Abcdefgh");
+        const senha = new Senha("Abcdefgh1");
         const resultado = ServicoSenha.verificarSenha(senha.senha);
         expect(resultado).toBe(true);
     });
@@ -33,7 +33,7 @@ describe("validar senha", () => {
     });
 
     test('aceitar senha com letra minúscula', ()=> {
-        const senha = new Senha("Abcdefgh");
+        const senha = new Senha("Abcdefgh1");
         const resultado = ServicoSenha.verificarSenha(senha.senha);
         expect(resultado).toBe(true);
     });
@@ -45,7 +45,7 @@ describe("validar senha", () => {
     });
 
     test('aceitar senha com letra maiúscula e minúscula', ()=> {
-        const senha = new Senha("Abcdefgh");
+        const senha = new Senha("Abcdefgh8");
         const resultado = ServicoSenha.verificarSenha(senha.senha);
         expect(resultado).toBe(true);
     });

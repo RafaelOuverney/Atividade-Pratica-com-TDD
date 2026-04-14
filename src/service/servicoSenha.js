@@ -1,24 +1,20 @@
 class ServicoSenha {
 
     static verificarSenha(senha) {
-        return this.temTamanhoMinimo(senha) && this.temLetraMaiuscula(senha) && this.temLetraMinuscula(senha) && this.temNumero(senha);
+        return this.temTamanhoMinimo(senha) && 
+        this.temPadrao(senha, /[A-Z]/) && 
+        this.temPadrao(senha, /[a-z]/) && 
+        this.temPadrao(senha, /[0-9]/);
     }
 
     static temTamanhoMinimo(senha) {
         return senha.length >= 8;
     }
 
-    static temLetraMaiuscula(senha) {
-        return /[A-Z]/.test(senha);
+    static temPadrao(senha, regex){
+        return regex.test(senha);
     }
 
-    static temLetraMinuscula(senha) {
-        return /[a-z]/.test(senha);
-    }
-
-    static temNumero(senha) {
-        return /[0-9]/.test(senha);
-    }
 }
 
 module.exports = { ServicoSenha };
