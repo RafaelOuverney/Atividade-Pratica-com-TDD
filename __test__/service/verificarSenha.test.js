@@ -80,4 +80,16 @@ describe("validar senha", () => {
         expect(resultado).toBe(false);
     });
 
+    test('aceitar senha com ao menos um numero', ()=> {
+        const senha = new Senha("Abcdefgh1");
+        const resultado = ServicoSenha.verificarSenha(senha.senha);
+        expect(resultado).toBe(true);
+    });
+
+    test('rejeitar senha sem caracteres especiais', ()=> {
+        const senha = new Senha("Abcdefgh1");
+        const resultado = ServicoSenha.verificarSenha(senha.senha);
+        expect(resultado).toBe(false);
+    });
+
 });
