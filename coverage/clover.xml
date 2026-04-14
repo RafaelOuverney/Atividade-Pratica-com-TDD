@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1776195431011" clover="3.2.0">
+  <project timestamp="1776195431011" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4" elements="16" coveredelements="16" complexity="0" loc="6" ncloc="6" packages="2" files="2" classes="2"/>
+    <package name="model">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="senha.js" path="D:\IFPR\Teste de Software\Atividade Avaliativa\src\model\senha.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="18" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="service">
+      <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+      <file name="servicoSenha.js" path="D:\IFPR\Teste de Software\Atividade Avaliativa\src\service\servicoSenha.js">
+        <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="4" count="18" type="cond" truecount="6" falsecount="0"/>
+        <line num="13" count="18" type="stmt"/>
+        <line num="17" count="52" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
