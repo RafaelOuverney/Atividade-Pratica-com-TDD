@@ -19,4 +19,10 @@ describe("validar senha", () => {
         const resultado = ServicoSenha.verificarSenha(senha.senha);
         expect(resultado).toBe(false);
     })
+
+    test('aceitar senha com letra Maiúscula', ()=> {
+        const senha = new Senha("Abcdefgh");
+        const resultado = ServicoSenha.verificarSenha(senha.senha);
+        expect(resultado).toBe(true);
+    });
 });
