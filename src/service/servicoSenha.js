@@ -1,15 +1,15 @@
 class ServicoSenha {
 
     static verificarSenha(senha) {
-        if (senha.length < 8) {
-            return false;
-        }
-        if (!/[A-Z]/.test(senha)) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return this.temTamanhoMinimo(senha) && this.temLetraMaiuscula(senha);
+    }
+
+    static temTamanhoMinimo(senha) {
+        return senha.length >= 8;
+    }
+
+    static temLetraMaiuscula(senha) {
+        return /[A-Z]/.test(senha);
     }
 }
 
