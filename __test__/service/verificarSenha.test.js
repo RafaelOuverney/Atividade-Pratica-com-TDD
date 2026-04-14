@@ -92,4 +92,10 @@ describe("validar senha", () => {
         expect(resultado).toBe(false);
     });
 
+    test('aceitar senha com caracteres especiais', ()=> {
+        const senha = new Senha("Abcdefgh1!");
+        const resultado = ServicoSenha.verificarSenha(senha.senha);
+        expect(resultado).toBe(true);
+    });
+
 });
