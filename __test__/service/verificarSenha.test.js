@@ -7,4 +7,10 @@ describe("validar senha", () => {
         const resultado = ServicoSenha.verificarSenha(senha.senha);
         expect(resultado).toBe(false);  
     });
+
+    test('aceitar senha com 8 ou mais caracteres', () => {
+        const senha = new Senha("12345678");
+        const resultado = ServicoSenha.verificarSenha(senha.senha);
+        expect(resultado).toBe(true);  
+    });
 });
