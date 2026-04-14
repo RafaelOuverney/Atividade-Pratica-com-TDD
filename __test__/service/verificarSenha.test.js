@@ -5,6 +5,6 @@ describe("validar senha", () => {
     test('rejeitar senha com menos de 8 caracteres', () => {
         const senha = new Senha("12345");
         const resultado = ServicoSenha.verificarSenha(senha.senha);
-        expect(resultado).toBe(false);
+        expect(resultado).toBe(false);  
     });
 });
