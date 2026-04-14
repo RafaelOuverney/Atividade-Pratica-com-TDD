@@ -1,7 +1,7 @@
 class ServicoSenha {
 
     static verificarSenha(senha) {
-        return this.temTamanhoMinimo(senha) && this.temLetraMaiuscula(senha) && this.temLetraMinuscula(senha);
+        return this.temTamanhoMinimo(senha) && this.temLetraMaiuscula(senha) && this.temLetraMinuscula(senha) && this.temNumero(senha);
     }
 
     static temTamanhoMinimo(senha) {
@@ -14,6 +14,10 @@ class ServicoSenha {
 
     static temLetraMinuscula(senha) {
         return /[a-z]/.test(senha);
+    }
+
+    static temNumero(senha) {
+        return /[0-9]/.test(senha);
     }
 }
 
